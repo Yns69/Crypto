@@ -18,7 +18,7 @@ public:
 	int initMessageFromFile(string file);
 	void cryptedMessage(unsigned short);
 	void decryptedMessage(unsigned short);
-	int saveMessage(string);
+	int saveMessage(string file2);
 
 private:
 	string message;

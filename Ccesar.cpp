@@ -35,7 +35,6 @@ int Ccesar::initMessageFromFile(string fileName)
 	/*cout << "fichier a ouvrir " << fileName << endl;*/
 	ifstream monFlux(fileName); //1
 	if (!monFlux.is_open()) { 
-		cerr << "Erreur" << endl;
 		return -1;
 	}
 
@@ -50,7 +49,20 @@ int Ccesar::initMessageFromFile(string fileName)
 	monFlux.close();  //3
 	return 0;
 }
+int Ccesar::saveMessage(string fileName2)
+{
+	ofstream monflux2(fileName2); 
 
+	if (monflux2)  //On teste si tout est OK
+	{
+		monflux2 << message << endl;
+		return 0;
+	}
+	else
+	{
+	return -1;
+	}
+}
 
 void Ccesar::cryptedMessage(unsigned short)
 {
@@ -60,10 +72,7 @@ void Ccesar::decryptedMessage(unsigned short)
 {
 }
 
-int Ccesar::saveMessage(string)
-{
-	return 0;
-}
+
 
 
 
