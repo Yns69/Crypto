@@ -14,5 +14,6 @@ int main()
     getline(cin, m);
     c.setMessage(m);
     m = c.getMessage();
-    cout << m << endl;
+    c.initMessageFromFile("Exemple2.txt");
+    //cout << m << endl;
 }
