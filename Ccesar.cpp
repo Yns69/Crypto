@@ -18,7 +18,7 @@ void Ccesar::setMessage(string param_s)
 {
 	message = param_s;
 	int taille = size(message);
-	char dernier;
+	char dernier =message.back();
 	cout << "la taille de la chaine est de " << taille << "et le dernier caractere est " << dernier << endl;
 
 
