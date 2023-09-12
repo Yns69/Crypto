@@ -22,8 +22,5 @@ public:
 private:
 	string message;
 	string messageCrypted;
-
-
-
 };
 
