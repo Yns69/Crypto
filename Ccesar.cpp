@@ -19,7 +19,7 @@ void Ccesar::setMessage(string param_s)
 	message = param_s;
 	int taille = size(message);
 	char dernier =message.back();
-	cout << "la taille de la chaine est de " << taille << "et le dernier caractere est " << dernier << endl;
+	cout << "la taille de la chaine est de " << taille << " et le dernier caractere est " << dernier << endl;
 	//message.at(message.length()-1);
 
 
@@ -88,6 +88,7 @@ void Ccesar::cryptedMessage(unsigned short cle)
 		}
 
 		cout << crypte << " " << endl;
+		messageCrypted += crypte;
 	}
 }
 
@@ -96,7 +97,7 @@ void Ccesar::decryptedMessage(unsigned short cle2)
 	{
 		string decrypte;
 
-		for (string::iterator it = message.begin(); it != message.end(); ++it)
+		for (string::iterator it = messageCrypted.begin(); it != messageCrypted.end(); ++it)
 		{
 			if (isupper(*it))
 			{
