@@ -16,8 +16,9 @@ int main()
     m = c.getMessage();
     //c.initMessageFromFile("Exemple2.txt");
     c.cryptedMessage(2);
+    c.saveMessage("Exemple3.txt");
     c.decryptedMessage(2);
     
-    //c.saveMessage("Exemple3.txt");
+    
     //cout << m << endl;
 }

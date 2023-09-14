@@ -55,7 +55,7 @@ int Ccesar::saveMessage(string fileName2)
 
 	if (monflux2)  //On teste si tout est OK
 	{
-		monflux2 << message << endl;
+		monflux2 << messageCrypted << endl;
 		return 0;
 	}
 	else
