@@ -80,12 +80,10 @@ void Ccesar::cryptedMessage(unsigned short cle)
 			if (isupper(*it))
 			{
 				crypte += (*it + cle - 'A') % 26 + 'A';
-				crypte += "";
 			}
 			else
 			{
 				crypte += (*it + cle - 'a') % 26 + 'a';
-				crypte += "";
 			}
 		}
 
@@ -93,8 +91,28 @@ void Ccesar::cryptedMessage(unsigned short cle)
 	}
 }
 
-void Ccesar::decryptedMessage(unsigned short)
+void Ccesar::decryptedMessage(unsigned short cle2)
 {
+	{
+		string decrypte;
+
+		for (string::iterator it = message.begin(); it != message.end(); ++it)
+		{
+			if (isupper(*it))
+			{
+				decrypte += (*it + cle2 - 'A') % 26 - 'A';
+			}
+			else
+			{
+				decrypte += (*it + cle2 - 'a') % 26 - 'a';
+			}
+		}
+
+		cout << decrypte << " " << endl;
+	}
+
+
+
 }
 
 
