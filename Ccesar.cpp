@@ -64,8 +64,33 @@ int Ccesar::saveMessage(string fileName2)
 	}
 }
 
-void Ccesar::cryptedMessage(unsigned short)
+void Ccesar::cryptedMessage(unsigned short cle)
 {
+
+	{
+		string crypte;
+
+		// Demande du decalage a l'utilisateur
+		cout << "Quel decalage voulez-vous utiliser ? ";
+		cin >> cle;
+
+
+		for (string::iterator it = message.begin(); it != message.end(); ++it)
+		{
+			if (isupper(*it))
+			{
+				crypte += (*it + cle - 'A') % 26 + 'A';
+				crypte += "";
+			}
+			else
+			{
+				crypte += (*it + cle - 'a') % 26 + 'a';
+				crypte += "";
+			}
+		}
+
+		cout << crypte << " " << endl;
+	}
 }
 
 void Ccesar::decryptedMessage(unsigned short)

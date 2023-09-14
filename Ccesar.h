@@ -16,7 +16,7 @@ public:
 	string getMessage();
 	void setMessage(string);
 	int initMessageFromFile(string file);
-	void cryptedMessage(unsigned short);
+	void cryptedMessage(unsigned short cle);
 	void decryptedMessage(unsigned short);
 	int saveMessage(string file2);
 

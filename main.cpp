@@ -14,7 +14,8 @@ int main()
     getline(cin, m);
     c.setMessage(m);
     m = c.getMessage();
+    c.cryptedMessage(0);
     //c.initMessageFromFile("Exemple2.txt");
-    c.saveMessage("Exemple3.txt");
+    //c.saveMessage("Exemple3.txt");
     //cout << m << endl;
 }
