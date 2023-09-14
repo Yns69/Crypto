@@ -71,8 +71,8 @@ void Ccesar::cryptedMessage(unsigned short cle)
 		string crypte;
 
 		// Demande du decalage a l'utilisateur
-		cout << "Quel decalage voulez-vous utiliser ? ";
-		cin >> cle;
+		//cout << "Quel decalage voulez-vous utiliser ? ";
+		//cin >> cle;
 
 
 		for (string::iterator it = message.begin(); it != message.end(); ++it)
@@ -100,11 +100,13 @@ void Ccesar::decryptedMessage(unsigned short cle2)
 		{
 			if (isupper(*it))
 			{
-				decrypte += (*it + cle2 - 'A') % 26 - 'A';
+				char decrypted_char = ((*it - 'A' - cle2 + 26) % 26) + 'A';
+				decrypte += decrypted_char;
 			}
 			else
 			{
-				decrypte += (*it + cle2 - 'a') % 26 - 'a';
+				char decrypted_char = ((*it - 'a' - cle2 + 26) % 26) + 'a';
+				decrypte += decrypted_char;
 			}
 		}
 
