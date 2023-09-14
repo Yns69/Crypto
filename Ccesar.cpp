@@ -118,11 +118,6 @@ void Ccesar::decryptedMessage(unsigned short cle2)
 
 }
 
-
-
-
-
-
 Ccesar::~Ccesar()
 {
 	cout << "je suis dans le déstructeur de la classe ccesar" << endl;
